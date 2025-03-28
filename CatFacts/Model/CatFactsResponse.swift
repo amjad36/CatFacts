@@ -1,5 +1,5 @@
 //
-//  CatFactResponse.swift
+//  CatFactsResponse.swift
 //  CatFacts
 //
 //  Created by Amjad on 28/03/25.
@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct CatFactResponse: Decodable {
+struct CatFactsResponse: Decodable {
     let data: [String]
 }
