@@ -6,14 +6,37 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		935071BD2DA9066D005194B8 /* CatFactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935071A92DA9066D005194B8 /* CatFactsApp.swift */; };
+		935071BE2DA9066D005194B8 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935071AB2DA9066D005194B8 /* HttpError.swift */; };
+		935071BF2DA9066D005194B8 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935071AC2DA9066D005194B8 /* HttpUtility.swift */; };
+		935071C02DA9066D005194B8 /* CatFactsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935071AF2DA9066D005194B8 /* CatFactsResponse.swift */; };
+		935071C12DA9066D005194B8 /* CatImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935071B02DA9066D005194B8 /* CatImagesResponse.swift */; };
+		935071C22DA9066D005194B8 /* CatFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935071B22DA9066D005194B8 /* CatFactView.swift */; };
+		935071C32DA9066D005194B8 /* CatFactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935071B32DA9066D005194B8 /* CatFactViewModel.swift */; };
+		935071C42DA9066D005194B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935071BA2DA9066D005194B8 /* Constants.swift */; };
+		935071C52DA9066D005194B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935071B62DA9066D005194B8 /* Preview Assets.xcassets */; };
+		935071C62DA9066D005194B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935071B82DA9066D005194B8 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8111E6012D970503005F8683 /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		935071A92DA9066D005194B8 /* CatFactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsApp.swift; sourceTree = "<group>"; };
+		935071AB2DA9066D005194B8 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		935071AC2DA9066D005194B8 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		935071AF2DA9066D005194B8 /* CatFactsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsResponse.swift; sourceTree = "<group>"; };
+		935071B02DA9066D005194B8 /* CatImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImagesResponse.swift; sourceTree = "<group>"; };
+		935071B22DA9066D005194B8 /* CatFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactView.swift; sourceTree = "<group>"; };
+		935071B32DA9066D005194B8 /* CatFactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactViewModel.swift; sourceTree = "<group>"; };
+		935071B62DA9066D005194B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		935071B82DA9066D005194B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		935071BA2DA9066D005194B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8111E6032D970503005F8683 /* CatFacts */ = {
+		935071C72DA906B7005194B8 /* Extensions */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CatFacts;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +55,7 @@
 		8111E5F82D970502005F8683 = {
 			isa = PBXGroup;
 			children = (
-				8111E6032D970503005F8683 /* CatFacts */,
+				935071BC2DA9066D005194B8 /* CatFacts */,
 				8111E6022D970503005F8683 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +66,96 @@
 				8111E6012D970503005F8683 /* CatFacts.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		935071AA2DA9066D005194B8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				935071A92DA9066D005194B8 /* CatFactsApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		935071AD2DA9066D005194B8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				935071AC2DA9066D005194B8 /* HttpUtility.swift */,
+				935071AB2DA9066D005194B8 /* HttpError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		935071AE2DA9066D005194B8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				935071AD2DA9066D005194B8 /* Network */,
+				935071C72DA906B7005194B8 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		935071B12DA9066D005194B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				935071AF2DA9066D005194B8 /* CatFactsResponse.swift */,
+				935071B02DA9066D005194B8 /* CatImagesResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		935071B42DA9066D005194B8 /* CatFact */ = {
+			isa = PBXGroup;
+			children = (
+				935071B22DA9066D005194B8 /* CatFactView.swift */,
+				935071B32DA9066D005194B8 /* CatFactViewModel.swift */,
+				935071B12DA9066D005194B8 /* Model */,
+			);
+			path = CatFact;
+			sourceTree = "<group>";
+		};
+		935071B52DA9066D005194B8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				935071B42DA9066D005194B8 /* CatFact */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		935071B72DA9066D005194B8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				935071B62DA9066D005194B8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		935071B92DA9066D005194B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				935071B72DA9066D005194B8 /* Preview Content */,
+				935071B82DA9066D005194B8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		935071BB2DA9066D005194B8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				935071BA2DA9066D005194B8 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		935071BC2DA9066D005194B8 /* CatFacts */ = {
+			isa = PBXGroup;
+			children = (
+				935071AA2DA9066D005194B8 /* App */,
+				935071AE2DA9066D005194B8 /* Core */,
+				935071B52DA9066D005194B8 /* Modules */,
+				935071B92DA9066D005194B8 /* Resources */,
+				935071BB2DA9066D005194B8 /* Utilities */,
+			);
+			path = CatFacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -61,7 +174,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				8111E6032D970503005F8683 /* CatFacts */,
+				935071C72DA906B7005194B8 /* Extensions */,
 			);
 			name = CatFacts;
 			packageProductDependencies = (
@@ -109,6 +222,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935071C52DA9066D005194B8 /* Preview Assets.xcassets in Resources */,
+				935071C62DA9066D005194B8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +234,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935071BD2DA9066D005194B8 /* CatFactsApp.swift in Sources */,
+				935071BE2DA9066D005194B8 /* HttpError.swift in Sources */,
+				935071BF2DA9066D005194B8 /* HttpUtility.swift in Sources */,
+				935071C02DA9066D005194B8 /* CatFactsResponse.swift in Sources */,
+				935071C12DA9066D005194B8 /* CatImagesResponse.swift in Sources */,
+				935071C22DA9066D005194B8 /* CatFactView.swift in Sources */,
+				935071C32DA9066D005194B8 /* CatFactViewModel.swift in Sources */,
+				935071C42DA9066D005194B8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +374,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CatFacts/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CatFacts/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 6L3T8BHYTU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +403,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CatFacts/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CatFacts/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 6L3T8BHYTU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  CatFactViewModel.swift
 //  CatFacts
 //
 //  Created by Amjad on 28/03/25.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-final class ContentViewModel: ObservableObject {
-    var images: [CatImagesResponse]?
-    var facts: CatFactsResponse?
-    
+final class CatFactViewModel: ObservableObject {
     @Published var imageUrl: String?
     @Published var fact: String?
     
-    init() {}
+    var images: [CatImagesResponse]?
+    var facts: CatFactsResponse?
+    
+    init() { }
     
     let limit: Int = 10
     
