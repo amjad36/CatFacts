@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CatFactView: View {
-    @StateObject var vm: CatFactViewModel = CatFactViewModel()
+    @StateObject private var vm: CatFactViewModel = CatFactViewModel()
     
     var body: some View {
         ZStack {
             Color.white
             VStack {
-                AsyncImage(url: URL(string: vm.imageUrl ??  "https://cdn2.thecatapi.com/images/iWyIaja-G.jpg")) { phase in
+                AsyncImage(url: URL(string: vm.imageUrl ??  "https://picsum.photos/id/12/600")) { phase in
                     switch phase {
                     case .empty:
                         ProgressView()
@@ -39,11 +39,13 @@ struct CatFactView: View {
             }
             .padding()
             .task {
-                async let catFactsResponse: () = vm.loadCatFacts()
-                async let catImagesResponse: () =  vm.loadCatImages()
+                async let factsLoaded: Void = vm.loadCatFacts()
+                async let imagesLoaded: Void =  vm.loadCatImages()
                 
-                _ = await (catFactsResponse, catImagesResponse)
+                // Await both operations to complete in parallel
+                _ = await (factsLoaded, imagesLoaded)
                 
+                // Safely display random content after loading completes
                 vm.showRandomCatImageAndFact()
             }
         }
