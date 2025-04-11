@@ -14,9 +14,9 @@ final class CatFactViewModel: ObservableObject {
     var images: [CatImagesResponse]?
     var facts: CatFactsResponse?
     
-    init() { }
+    private let limit: Int = 10
     
-    let limit: Int = 10
+    init() { }
     
     func loadCatImages() async {
         do {
